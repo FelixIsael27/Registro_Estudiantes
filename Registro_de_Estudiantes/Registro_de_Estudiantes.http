@@ -1,0 +1,6 @@
+@Registro_de_Estudiantes_HostAddress = http://localhost:5159
+
+GET {{Registro_de_Estudiantes_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
