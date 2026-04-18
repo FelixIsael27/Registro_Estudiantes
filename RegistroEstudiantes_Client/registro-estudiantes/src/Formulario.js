@@ -15,7 +15,7 @@ import axios from "axios";
     };
 
     const guardar = async () => {
-        await axios.post("https://localhost:5001/api/estudiantes", form);
+        await axios.post("https://localhost:7720/api/Estudiantes", form);
         alert("Guardado");
     };
 
