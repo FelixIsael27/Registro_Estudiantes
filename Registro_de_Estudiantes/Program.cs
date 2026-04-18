@@ -15,8 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll",
-        policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+    options.AddPolicy("AllowReact",
+        policy => policy.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader());
 });
 
 var app = builder.Build();
@@ -32,7 +32,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.UseCors("AllowAll");
+app.UseCors("AllowReact");
 
 app.MapControllers();
 

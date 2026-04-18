@@ -4,7 +4,7 @@ import axios from "axios";
 function Lista() {
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get("https://localhost:5001/api/estudiantes")
+        axios.get("http://localhost:5159/api/Estudiantes")
         .then(res => setData(res.data));
 }, []);
 
